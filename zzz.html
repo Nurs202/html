@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Музыкалық хит әндер</title>
+</head>
+<body background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYKIaUBsDVNGU9jXj6Os1jDSro9i9t2DR1HA&usqp=CAU">
+<body>
+<!--Контейнер таблицасын жасадык:
+border="1" - контейнер рамкасы. мәндерді үлкейту, рамканың көлемін өзгерту.
+align="center" - контеейнерді ортага орналастырамыз.
+rules="rows" - екілік рамканы өшіреміз.
+style="width:60%;" - стилін дұрыстаймыз
+-->
+<table
+border="1"
+align="center"
+rules="rows"
+style="width:90%;">
+<!--жол құрамыз-->
+<tr>
+<!--жолдың ұяшықтарын құрамыз-->
+<td>
+<!--Сайтымыздың үстінгі бөлігі-->
+
+<!--сайттың үстінгі бөлігіне тагыда ұяшық ашамыз.
+Оформление:
+border="1" - 2лік рамка көлем 1px
+background="images/168.png" - сайттың шапкасының суреті, сурет адресн өзіміз коямыз.
+bgcolor="#7FFFD4" - шапкадагы фон түсі, егер картинка болмаса.-->
+<table
+border="1"
+background="images/168.png"
+bgcolor="#7FFFD4"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Таблицаның жолдарын құрамыз-->
+<tr>
+<!--Бағандарын құрамыз-->
+<th>
+<!--Баған ұяшықтарының мәндері-->
+<h1>Музыкалық хит әндер</h1>
+<h3>The Beatles тобынын үздік бейнебаяндары</h3>
+
+<!--таблицаны жабамыз-->
+</th>
+</tr>
+</table>
+
+<!--Басты контент-->
+
+<table
+border="1"
+bgcolor="#F0E68C"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+
+<!--Жол құрамыз-->
+<tr>
+<!--Ұяшықтар
+Оформление:-->
+<link rel="stylesheet" type="text/css" href="muz.css" />
+<td>
+    <html>
+        <style>
+        .filterDiv {
+          float: left;
+          background-color: #2196F3;
+          color: #ffffff;
+          width: 100px;
+          line-height: 100px;
+          text-align: center;
+          margin: 2px;
+          display: none;
+        }
+        
+        .show {
+          display: block;
+        }
+        
+        .container {
+          margin-top: 20px;
+          overflow: hidden;
+        }
+        
+        /* Style the buttons */
+        .btn {
+          border: none;
+          outline: none;
+          padding: 12px 16px;
+          background-color: #f1f1f1;
+          cursor: pointer;
+        }
+        
+        .btn:hover {
+          background-color: #ddd;
+        }
+        
+        .btn.active {
+          background-color: #666;
+          color: white;
+        }
+        </style>
+        <body>
+        
+        <h2>Beatles бейнебаяндар тізімі</h2>
+        
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> 2008</button>
+          <button class="btn" onclick="filterSelection('cars')"> 2009</button>
+          <button class="btn" onclick="filterSelection('animals')"> 2010</button>
+          <button class="btn" onclick="filterSelection('fruits')"> 2015</button>
+          <button class="btn" onclick="filterSelection('colors')"> 2018</button>
+        </div>
+        
+        <div class="container">
+          <div class="filterDiv cars" ><a href="https://youtu.be/yJyClObyUOs">Yesterday</a></div>
+          <div class="filterDiv colors fruits"><a href="https://youtu.be/yJyClObyUOs">Bodth</a></div>
+          <div class="filterDiv cars"><a href="https://youtu.be/yJyClObyUOs">Volvo</a></div>
+          <div class="filterDiv colors"><a href="https://youtu.be/yJyClObyUOs">Bary</a></div>
+          <div class="filterDiv cars animals"><a href="https://youtu.be/yJyClObyUOs">Mustang</a></div>
+          <div class="filterDiv colors"><a href="https://youtu.be/yJyClObyUOs">Bastku</a></div>
+          <div class="filterDiv animals"><a href="https://youtu.be/yJyClObyUOs">Vorde</a></div>
+          <div class="filterDiv animals"><a href="https://youtu.be/yJyClObyUOs">Ders</a></div>
+          <div class="filterDiv fruits"><a href="https://youtu.be/yJyClObyUOs">Melon</a></div>
+          <div class="filterDiv fruits animals"><a href="https://youtu.be/yJyClObyUOs">Kiwi</a></div>
+          <div class="filterDiv fruits"><a href="https://youtu.be/yJyClObyUOs">Banana</a></div>
+          <div class="filterDiv fruits"><a href="https://youtu.be/yJyClObyUOs">Lestka</a></div>
+          
+        </div>
+        
+        <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("filterDiv");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+        
+        </body>
+        </html>
+<!--Жаңа абзац бастаймыз-->
+<center><h2 style="color:#ff0000"> Клип Don t Let Me Down</h2></center>
+<center><iframe style="border:7px #00B344  solid; width:700px;" width="760" height="315" src="https://www.youtube.com/embed/NCtzkaL2t_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>gjjtjyyfhdrddr</iframe></center>
+<center><h2 style="color:#ff0000">Клип Hey Jude</h2></center>
+<center><iframe style="border:7px #00B344  solid; width:700px;" width="560" height="315" src="https://www.youtube.com/embed/A_MjCqQoLLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><h2 style="color:#ff0000">Клип Yesterday</h2></center>
+<center><iframe style="border:7px #00B344  solid; width:700px;" width="560" height="315" src="https://www.youtube.com/embed/O-9qOIdhgmw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><h2 style="color:#ff0000">Клип Evolution</h2></center>
+<center><iframe style="border:7px #00B344  solid; width:700px;" width="560" height="315" src="https://www.youtube.com/embed/oDXZHr9Rmh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><h2 style="color:#ff0000">Клип Musical Evolution</h2></center>
+<center><iframe style="border:7px #00B344  solid; width:700px;" width="560" height="315" src="https://www.youtube.com/embed/wXTJBr9tt8Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<table
+border="1"
+bgcolor="#7FFFD4"
+height="100"
+cellpadding="10"
+style="width:100%; border-radius:5px;">
+<!--Жол ашамыз.-->
+<tr>
+<!--Баған құрамыз-->
+<th>
+<h3>Автор: Айтбай Ердәулет, Абдурохмонов Нурсултон, Абдыхалык Аружан, Анварбекулы Аскар </h3>
+<!--Сайттың астынғы бөлігін жабамыз-->
+</th>
+</tr>
+</table>
+<!--Жалпы сайтты жабамыз-->
+</td>
+</tr>
+</table>
+</body>
+</html>
